@@ -19,6 +19,22 @@ public class Janela extends JFrame{
 	JButton lblEXI = new JButton("Exibir");
 	JButton lblED = new JButton("Editar");
 	JButton lblAJ = new JButton("Ajuda");
+	JButton lblAPG = new JButton("←");
+	JButton lblCE = new JButton("CE");
+	JButton lblC = new JButton("C");
+	JButton lblMAME = new JButton("±");
+	JButton lblRAIZ = new JButton("√");
+	JButton lbl7 = new JButton("7");
+	JButton lbl8 = new JButton("8");
+	JButton lbl9 = new JButton("9");
+	JButton lblBARRA = new JButton("/");
+	JButton lblPORC = new JButton("%");
+	JButton lbl4 = new JButton("4");
+	JButton lbl5 = new JButton("5");
+	JButton lbl6 = new JButton("6");
+	JButton lblAS = new JButton("*");
+	JButton lbl1X = new JButton("1/x");
+	
 	
 	
 	public Janela() {
@@ -52,6 +68,51 @@ public class Janela extends JFrame{
 		
 		paine.add(lblAJ);
 		lblAJ.setBounds(150,2,70,15);
+		
+		paine.add(lblAPG);
+		lblAPG.setBounds(10,108,58,28);
+		
+		paine.add(lblCE);
+		lblCE.setBounds(70,108,58,28);
+		
+		paine.add(lblC);
+		lblC.setBounds(130,108,58,28);
+		
+		paine.add(lblMAME);
+		lblMAME.setBounds(190,108,58,28);
+		
+		paine.add(lblRAIZ);
+		lblRAIZ.setBounds(250,108,58,28);
+		
+		paine.add(lbl7);
+		lbl7.setBounds(10,141,58,28);
+		
+		paine.add(lbl8);
+		lbl8.setBounds(70,141,58,28);
+		
+		paine.add(lbl9);
+		lbl9.setBounds(130,141,58,28);
+		
+		paine.add(lblBARRA);
+		lblBARRA.setBounds(190,141,58,28);
+		
+		paine.add(lblPORC);
+		lblPORC.setBounds(250,141,58,28);
+		
+		paine.add(lbl4);
+		lbl4.setBounds(10,174,58,28);
+		
+		paine.add(lbl5);
+		lbl5.setBounds(70,174,58,28);
+		
+		paine.add(lbl6);
+		lbl6.setBounds(130,174,58,28);
+		
+		paine.add(lblAS);
+		lblAS.setBounds(190,174,58,28);
+		
+		paine.add(lbl1X);
+		lbl1X.setBounds(250,174,58,28);
 		
 		
 		this.setSize(320,400);
