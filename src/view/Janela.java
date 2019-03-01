@@ -34,6 +34,14 @@ public class Janela extends JFrame{
 	JButton lbl6 = new JButton("6");
 	JButton lblAS = new JButton("*");
 	JButton lbl1X = new JButton("1/x");
+	JButton lbl1 = new JButton("1");
+	JButton lbl2 = new JButton("2");
+	JButton lbl3 = new JButton("3");
+	JButton lblIG = new JButton("=");
+	JButton lblMe = new JButton("-");
+	JButton lbl0 = new JButton("0");
+	JButton lblV = new JButton(",");
+	JButton lblSO = new JButton("+");
 	
 	
 	
@@ -114,8 +122,32 @@ public class Janela extends JFrame{
 		paine.add(lbl1X);
 		lbl1X.setBounds(250,174,58,28);
 		
+		paine.add(lbl1);
+		lbl1.setBounds(10,207,58,28);
 		
-		this.setSize(320,400);
+		paine.add(lbl2);
+		lbl2.setBounds(70,207,58,28);
+		
+		paine.add(lbl3);
+		lbl3.setBounds(130,207,58,28);
+		
+		paine.add(lblMe);
+		lblMe.setBounds(190,207,58,28);
+		
+		paine.add(lblIG);
+		lblIG.setBounds(250,207,58,61);
+		
+		paine.add(lbl0);
+		lbl0.setBounds(10,240,118,28);
+		
+		paine.add(lblV);
+		lblV.setBounds(130,240,58,28);
+		
+		paine.add(lblSO);
+		lblSO.setBounds(190,240,58,28);
+		
+		
+		this.setSize(320,310);
 		this.setVisible(true);
 		this.setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
