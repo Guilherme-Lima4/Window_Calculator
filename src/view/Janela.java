@@ -2,10 +2,16 @@ package view;
 
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JLabel;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+
+import Calculos.FuncoesMatematicas;
+
 import javax.swing.JComboBox;
 
 public class Janela extends JFrame{
@@ -44,6 +50,9 @@ public class Janela extends JFrame{
 	JButton lblSO = new JButton("+");
 	
 	
+	FuncoesMatematicas mat = new FuncoesMatematicas();
+	String sinal = null;
+	double valor1 = 0, valor2 = 0;
 	
 	public Janela() {
 		super("Calculadora");
@@ -145,6 +154,166 @@ public class Janela extends JFrame{
 		
 		paine.add(lblSO);
 		lblSO.setBounds(190,240,58,28);
+		
+		lbl0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("0");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "0");
+				}
+				
+				
+			}
+		});
+		
+		lbl1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("1");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "1");
+				}
+				
+				
+			}
+		});
+		
+		lbl2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("2");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "2");
+				}
+				
+				
+			}
+		});
+		
+		lbl3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("3");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "3");
+				}
+				
+				
+			}
+		});
+		
+		lbl4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("4");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "4");
+				}
+				
+				
+			}
+		});
+		
+		lbl5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("5");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "5");
+				}
+				
+				
+			}
+		});
+		
+		lbl6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("6");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "6");
+				}
+				
+				
+			}
+		});
+		
+		lbl7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("7");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "7");
+				}
+				
+				
+			}
+		});
+		
+		lbl8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("8");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "8");
+				}
+				
+				
+			}
+		});
+		
+		lbl9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText("9");
+				}else {
+					lblvisor.setText(lblvisor.getText() + "9");
+				}
+				
+				
+			}
+		});
+		
+		
+		
+		lblCE.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				lblvisor.setText("0");
+				
+			}
+		});
+		
+		lblC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				lblvisor.setText("0");
+				
+			}
+		});
+		
+		lblIG.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor2 = Double.parseDouble(lblvisor.getText());
+
+				if(sinal.equals("soma")) {
+					lblvisor.setText(mat.soma(valor1, valor2) + "");
+				}
+				
+			}
+		});
+		
 		
 		
 		this.setSize(320,310);
