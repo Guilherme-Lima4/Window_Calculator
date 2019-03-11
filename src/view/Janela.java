@@ -16,6 +16,7 @@ import javax.swing.JComboBox;
 
 public class Janela extends JFrame{
 	
+	//criacao dos botoes
 	JTextField lblvisor = new JTextField();
 	JButton lblMC = new JButton("MC");
 	JButton lblMR = new JButton("MR");
@@ -58,6 +59,7 @@ public class Janela extends JFrame{
 		super("Calculadora");
 		Container paine = this.getContentPane();
 		
+		//ajuste do tamanho e localizacao dos botoes
 		paine.setLayout(null);
 		paine.add(lblvisor);
 		lblvisor.setBounds(10,20,297,50);
@@ -155,6 +157,8 @@ public class Janela extends JFrame{
 		paine.add(lblSO);
 		lblSO.setBounds(190,240,58,28);
 		
+		
+		//funcoes para aparecer os numeros no visor
 		lbl0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -286,7 +290,7 @@ public class Janela extends JFrame{
 		});
 		
 		
-		
+		//funcao para limpar a tela e aparecer o numero 0
 		lblCE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -295,6 +299,7 @@ public class Janela extends JFrame{
 			}
 		});
 		
+		//funcao para limpar a tela e aparecer o numero 0
 		lblC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -302,7 +307,7 @@ public class Janela extends JFrame{
 				
 			}
 		});
-		
+		//funcao do botao de igual
 		lblIG.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				valor2 = Double.parseDouble(lblvisor.getText());
@@ -310,12 +315,78 @@ public class Janela extends JFrame{
 				if(sinal.equals("soma")) {
 					lblvisor.setText(mat.soma(valor1, valor2) + "");
 				}
+				else if(sinal.equals("sub")) {
+					lblvisor.setText(mat.sub(valor1, valor2) + "");
+				}
+				else if(sinal.equals("mult")) {
+					lblvisor.setText(mat.mult(valor1, valor2) + "");
+				}
+				else if(sinal.equals("divisao")) {
+					lblvisor.setText(mat.divisao(valor1, valor2) + "");
+				}
+				else if(sinal.equals("porcentagem")) {
+					lblvisor.setText(mat.porcentagem(valor1, valor2) + "");
+				}
+				else if(sinal.equals("raiz")) {
+					lblvisor.setText(mat.raiz(valor1) + "");
+				}
 				
+			}
+		});
+		
+		//funcoes dos botoes das operacoes
+		lblSO.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(lblvisor.getText());
+				sinal = "soma";
+				lblvisor.setText("0");
+			}
+		});
+		
+		lblMe.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(lblvisor.getText());
+				sinal = "sub";
+				lblvisor.setText("0");
+			}
+		});
+		
+		lblAS.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(lblvisor.getText());
+				sinal = "mult";
+				lblvisor.setText("0");
+			}
+		});
+		
+		lblBARRA.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(lblvisor.getText());
+				sinal = "divisao";
+				lblvisor.setText("0");
+			}
+		});
+		
+		lblPORC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(lblvisor.getText());
+				sinal = "porcentagem";
+				lblvisor.setText("0");
+			}
+		});
+		
+		lblRAIZ.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(lblvisor.getText());
+				sinal = "raiz";
+				lblvisor.setText("0");
 			}
 		});
 		
 		
 		
+		
+		//ajustes na tela
 		this.setSize(320,310);
 		this.setVisible(true);
 		this.setResizable(false);
