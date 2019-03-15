@@ -289,6 +289,19 @@ public class Janela extends JFrame{
 			}
 		});
 		
+		lblV.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(lblvisor.getText().equals("0")) {
+					lblvisor.setText(",");
+				}else {
+					lblvisor.setText(lblvisor.getText() + ",");
+				}
+				
+				
+			}
+		});
+		
 		
 		//funcao para limpar a tela e aparecer o numero 0
 		lblCE.addActionListener(new ActionListener() {
@@ -329,6 +342,9 @@ public class Janela extends JFrame{
 				}
 				else if(sinal.equals("raiz")) {
 					lblvisor.setText(mat.raiz(valor1) + "");
+				}
+				else if(sinal.equals("inverso")) {
+					lblvisor.setText(mat.inverso(valor1) + "");
 				}
 				
 			}
@@ -382,6 +398,16 @@ public class Janela extends JFrame{
 				lblvisor.setText("0");
 			}
 		});
+		
+		lbl1X.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(lblvisor.getText());
+				sinal = "inverso";
+				lblvisor.setText("0");
+			}
+		});
+		
+		
 		
 		
 		

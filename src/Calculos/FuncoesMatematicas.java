@@ -30,5 +30,10 @@ public class FuncoesMatematicas {
 		double total = Math.sqrt(valor1);
 		return total;
 	}
+	
+	public double inverso (double valor1) {
+		double total = 1 / valor1;
+		return total;
+	}
 
 }
