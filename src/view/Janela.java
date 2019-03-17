@@ -2,8 +2,10 @@ package view;
 
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JLabel;
 import javax.swing.JFrame;
@@ -293,9 +295,9 @@ public class Janela extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				
 				if(lblvisor.getText().equals("0")) {
-					lblvisor.setText(",");
+					lblvisor.setText(".");
 				}else {
-					lblvisor.setText(lblvisor.getText() + ",");
+					lblvisor.setText(lblvisor.getText() + ".");
 				}
 				
 				
@@ -407,11 +409,13 @@ public class Janela extends JFrame{
 			}
 		});
 		
-		
-		
-		
-		
-		
+		lblAPG.addActionListener(new ActionListener() {
+  			public void actionPerformed(ActionEvent e) {
+  		        lblvisor.setText(lblvisor.getText().substring(0, lblvisor.getText().length()- 1));
+  		  			
+  		  				}
+  		 });
+			
 		//ajustes na tela
 		this.setSize(320,310);
 		this.setVisible(true);
